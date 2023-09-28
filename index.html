@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+
+        /*
+        function soma(vetor) {
+          let soma = 0;
+          for (v of vetor){
+            soma = soma + v;
+          }
+          return soma;
+        }
+    
+        let vet1 = [1, 2, 3, 4];
+        console.log(soma(vet1));
+        */
+    
+        function click_calcular() {
+          let valorA = document.getElementById("Peso").value;
+          let valorB = document.getElementById("Altura").value;
+          if (valorA == ""){
+            alert("Informe o seu Peso");
+          }else if (valorB == ""){
+            alert("Informe a sua altura");
+          }else{
+            let soma = Number(valorA) + Number(valorB);
+            document.getElementById("txtSoma").value = soma;
+            
+          }
+        }
+    
+        function click_limpar() {
+          document.getElementById("Peso").value = "";
+          document.getElementById("Altura").value = "";
+          document.getElementById("Valor").value = "";
+          
+        }
+    
+    
+      </script>
+</head>
+<body>
+    <h1 class="titulo">Calculadora de IMC</h1>
+    
+      <form class="formulario">
+        <div>
+          <label for="Peso">Informe seu Peso: </label>
+          <input type="number" name="" id="Peso" value="46">
+        </div>
+        <div>
+          <label for="Altura">Informe a sua Altura: </label>
+          <input type="number" name="" id="Altura" value="1.60"
+        </div>
+        <div>
+          <label for="txtSoma">Valor: </label>
+          <input type="number" name="" id="txtSoma" disabled> 
+        </div>
+        <div>
+          <input type="button" value="Calcular" onclick="click_calcular();">
+    
+          <input type="button" value="Limpar" onclick="click_limpar();">
+        </div>
+      </form>
+</body>
+</html>
